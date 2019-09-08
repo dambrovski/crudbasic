@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>CRUD Básico</title>
+  
+
+
+
+                            <body>
+
+                                <h1>Listar Produtos</h1>
+                                <div class="nav-wrapper">
+                             
+                                  
+                                    <li><a href="/listarAlimentos">Listar Alimentos</a></li>
+                                    <li><a href="/cadastrarAlimento">Cadastrar Alimentos</a></li>
+                                
+                                </head>
+                    <BODY>
+                                <br>
+                                <br>
+
+<div th:each="alimento : ${alimento}" class="container">
+
+    <div class="row">
+        <p>Código: <span th:text="${alimento.codigo}"></span></p>
+        <p>Nome: <span th:text="${alimento.nome}"></span></p>
+        <p>Peso: <span th:text="${alimento.peso}"></span></p>
+        <p>Marca: <span th:text="${alimento.marca}"></span></p>
+    </div>
+
+    <br>
+    <br>
+
+    <H1>Alterar Cadastro</H1>
+
+
+    <form class="container" method="post">
+
+            Nome do Alimento: <input type="text" value="" name="nome">
+            <div class="row">
+                    <div class="input-field col s6">
+            Peso do Alimento: <input type="text" value="" name="peso">
+        </div>
+        <div class="input-field col s3">
+            Calorias do Alimento: <input type="text" value="" name="calorias">
+        </div>
+        <div class="input-field col s3">
+            Marca do Alimento:<input type="text" value="" name="marca">
+        </div>
+    </div>
+    <br>
+        <button type="submit" class="waves-effect waves-light btn">Salvar</button>
+    </form>
+
+</table>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+</body>
+</html>

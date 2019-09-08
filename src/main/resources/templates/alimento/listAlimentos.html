@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>CRUD Básico</title>
+    </head>
+
+    <body>
+
+        <h1>Cadastro de Produtos</h1>
+                            <div class="nav-wrapper">
+                         
+                    
+                              
+                            
+                            <br>
+                            <br>
+
+                            <body>
+
+                                <h1>Listar Produtos</h1>
+                                <div class="nav-wrapper">
+                             
+                                  
+                                    <li><a href="/listarAlimentos">Listar Alimentos</a></li>
+                                    <li><a href="/cadastrarAlimento">Cadastrar Alimentos</a></li>
+                                
+                                <br>
+                                <br>
+                            
+                            <table class="container">
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Nome</th>
+                                        <th>Peso</th>
+                                        <th>Marca</th>
+                                        <th>Deletar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            <tr th:each="alimento : ${alimentos}">  
+                            
+                                
+                                    
+                                        <td><a th:href="${(#mvc.url('AC#detalhesAlimento').arg(0, alimento.codigo)).build()}"><span th:text="${alimento.nome}"></span></a></td>
+                                        <td><span th:text="${alimento.nome}"></span></td>
+                                        <td><span th:text="${alimento.peso}"></span></td>
+                                        <td><span th:text="${alimento.marca}"></span></td>
+                                        
+                                        <td><a th:href="${(#mvc.url('AC#deletarAlimento').arg(0, alimento.codigo)).build()}">deletar</a></td>
+                                       
+                                       
+                                    </tr>
+                                </tbody>
+                            
+                                </table>
+                            
+                            <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                            <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+                            
+                            </body>
+                            </html>

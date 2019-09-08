@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>CRUD Básico</title>
+    </head>
+
+    <body>
+
+        <h1>Cadastro de Produtos</h1>
+                            <div class="nav-wrapper">
+                         
+                              
+                                <li><a href="/index">Index</a></li>
+                              
+                            
+                            <br>
+                            <br>
+
+        <form class="container" method="post">
+
+                Nome do Alimento: <input type="text" value="" name="nome">
+                <div class="row">
+                        <div class="input-field col s6">
+                Peso do Alimento: <input type="text" value="" name="peso">
+            </div>
+            <div class="input-field col s3">
+                Calorias do Alimento: <input type="text" value="" name="calorias">
+            </div>
+            <div class="input-field col s3">
+                Marca do Alimento:<input type="text" value="" name="marca">
+            </div>
+        </div>
+        <br>
+            <button type="submit" class="waves-effect waves-light btn">Salvar</button>
+        </form>
+
+
+            <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    </body>
+
+
+</html>
